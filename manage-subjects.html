@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Manage Subjects - EVENING CLASSES
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body onload="loadSubjects()">
+
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+    <h2>
+        EVENING CLASSES
+    </h2>
+
+    <p>
+        Subject Management
+    </p>
+
+</div>
+
+
+
+<!-- NAVIGATION -->
+
+<div class="nav">
+
+    <a href="admin-dashboard.html">
+        Dashboard
+    </a>
+
+    <a href="manage-staff.html">
+        Manage Staff
+    </a>
+
+    <a href="manage-subjects.html">
+        Manage Subjects
+    </a>
+
+    <a href="submissions.html">
+        Teaching Submissions
+    </a>
+
+    <a href="reports.html">
+        Reports
+    </a>
+
+    <a href="#" onclick="logout()">
+        Logout
+    </a>
+
+</div>
+
+
+
+
+<div class="container">
+
+
+
+    <!-- ADD SUBJECT FORM -->
+
+    <div class="section-box">
+
+        <h2>
+            Add / Edit Subject
+        </h2>
+
+
+        <div class="form-group">
+
+            <label>
+                Subject Name
+            </label>
+
+
+            <input
+                type="text"
+                id="subjectName"
+                placeholder="Enter subject name">
+
+
+        </div>
+
+
+
+        <!-- Hidden field for editing -->
+
+        <input
+            type="hidden"
+            id="subjectEditIndex"
+            value="">
+
+
+
+        <button onclick="saveSubject()">
+
+            Save Subject
+
+        </button>
+
+
+
+        <button
+            class="secondary-btn"
+            onclick="clearSubjectForm()">
+
+            Clear
+
+        </button>
+
+
+
+        <p id="subjectMessage"></p>
+
+
+    </div>
+
+
+
+
+
+    <!-- SUBJECT LIST -->
+
+    <div class="section-box">
+
+
+        <h2>
+            Available Subjects
+        </h2>
+
+
+
+        <div class="table-responsive">
+
+
+            <table>
+
+
+                <thead>
+
+                <tr>
+
+                    <th>
+                        No.
+                    </th>
+
+
+                    <th>
+                        Subject Name
+                    </th>
+
+
+                    <th>
+                        Action
+                    </th>
+
+
+                </tr>
+
+                </thead>
+
+
+
+                <tbody id="subjectTableBody">
+
+
+                </tbody>
+
+
+
+            </table>
+
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
