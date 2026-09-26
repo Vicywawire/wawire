@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Staff Dashboard - Evening Classes</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadStaffDashboard()">
+
+<div class="header">
+
+    <h2>EVENING CLASSES</h2>
+
+    <p>Staff Dashboard</p>
+
+</div>
+
+
+<div class="nav">
+
+    <a href="staff-dashboard.html">Dashboard</a>
+
+    <a href="#mySubmissions">My Submissions</a>
+
+    <a href="#" onclick="logout()">Logout</a>
+
+</div>
+
+
+<div class="container">
+
+
+    <div class="welcome-box">
+
+        <h2>
+            Welcome,
+            <span id="staffWelcomeName">Staff</span>
+        </h2>
+
+        <p>
+            Record the evening class that you have taught.
+        </p>
+
+    </div>
+
+
+
+    <!-- TEACHING FORM -->
+
+    <div class="google-form">
+
+        <div class="form-header">
+
+            <h2>Evening Class Teaching Record</h2>
+
+            <p>
+                Complete all the required information below.
+            </p>
+
+            <span class="required-text">
+                * Required fields
+            </span>
+
+        </div>
+
+
+        <form onsubmit="submitTeachingRecord(event)">
+
+
+            <div class="question-card">
+
+                <label>
+                    Subject Taught *
+                </label>
+
+                <select id="teachingSubject" required>
+
+                    <option value="">
+                        Select Subject
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="question-card">
+
+                <label>
+                    Date *
+                </label>
+
+                <input
+                    type="date"
+                    id="teachingDate"
+                    required>
+
+            </div>
+
+
+            <div class="question-card">
+
+                <label>
+                    Start Time *
+                </label>
+
+                <input
+                    type="time"
+                    id="startTime"
+                    required>
+
+            </div>
+
+
+            <div class="question-card">
+
+                <label>
+                    End Time *
+                </label>
+
+                <input
+                    type="time"
+                    id="endTime"
+                    required>
+
+            </div>
+
+
+            <div class="question-card">
+
+                <label>
+                    Topic Covered *
+                </label>
+
+                <input
+                    type="text"
+                    id="topicCovered"
+                    placeholder="Enter topic taught"
+                    required>
+
+            </div>
+
+
+            <div class="question-card">
+
+                <label>
+                    Remarks
+                </label>
+
+                <textarea
+                    id="remarks"
+                    placeholder="Enter remarks about the lesson"></textarea>
+
+            </div>
+
+
+            <button type="submit">
+                SUBMIT CLASS RECORD
+            </button>
+
+
+            <button
+                type="reset"
+                class="secondary-btn">
+
+                CLEAR
+
+            </button>
+
+
+            <p id="submissionMessage"></p>
+
+        </form>
+
+    </div>
+
+
+
+    <!-- STAFF PREVIOUS SUBMISSIONS -->
+
+    <div
+        class="section-box"
+        id="mySubmissions">
+
+        <h2>My Previous Submissions</h2>
+
+
+        <div class="table-responsive">
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>#</th>
+
+                    <th>Date</th>
+
+                    <th>Subject</th>
+
+                    <th>Time</th>
+
+                    <th>Topic</th>
+
+                    <th>Remarks</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+                </thead>
+
+
+                <tbody id="mySubmissionTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
