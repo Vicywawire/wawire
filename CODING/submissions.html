@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Teaching Submissions - Evening Classes</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body onload="loadAdminSubmissions()">
+
+
+<div class="header">
+
+    <h2>EVENING CLASSES</h2>
+
+    <p>Teaching Submissions</p>
+
+</div>
+
+
+<div class="nav">
+
+    <a href="admin-dashboard.html">
+        Dashboard
+    </a>
+
+    <a href="manage-staff.html">
+        Manage Staff
+    </a>
+
+    <a href="manage-subjects.html">
+        Manage Subjects
+    </a>
+
+    <a href="submissions.html">
+        Teaching Submissions
+    </a>
+
+    <a href="reports.html">
+        Reports
+    </a>
+
+    <a href="#" onclick="logout()">
+        Logout
+    </a>
+
+</div>
+
+
+
+<div class="container">
+
+
+    <div class="section-box">
+
+        <h2>All Teaching Records</h2>
+
+
+        <div class="filter-area">
+
+            <label>
+                Filter by Status
+            </label>
+
+
+            <select
+                id="submissionFilter"
+                onchange="loadAdminSubmissions()">
+
+                <option value="All">
+                    All Submissions
+                </option>
+
+                <option value="Pending">
+                    Pending
+                </option>
+
+                <option value="Approved">
+                    Approved
+                </option>
+
+                <option value="Rejected">
+                    Rejected
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="table-responsive">
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>#</th>
+
+                    <th>Staff</th>
+
+                    <th>Subject</th>
+
+                    <th>Date</th>
+
+                    <th>Time</th>
+
+                    <th>Topic</th>
+
+                    <th>Remarks</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+                </thead>
+
+
+                <tbody id="adminSubmissionTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Reports - Evening Classes</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body onload="loadReports()">
+
+
+<div class="header">
+
+    <h2>EVENING CLASSES</h2>
+
+    <p>Activity Reports</p>
+
+</div>
+
+
+<div class="nav">
+
+    <a href="admin-dashboard.html">
+        Dashboard
+    </a>
+
+    <a href="manage-staff.html">
+        Manage Staff
+    </a>
+
+    <a href="manage-subjects.html">
+        Manage Subjects
+    </a>
+
+    <a href="submissions.html">
+        Teaching Submissions
+    </a>
+
+    <a href="reports.html">
+        Reports
+    </a>
+
+    <a href="#" onclick="logout()">
+        Logout
+    </a>
+
+</div>
+
+
+
+<div class="container">
+
+
+    <h2>Evening Classes Reports</h2>
+
+
+    <div class="dashboard-cards">
+
+
+        <div class="card">
+
+            <h3>Total Classes</h3>
+
+            <h1 id="reportTotalClasses">
+                0
+            </h1>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Approved</h3>
+
+            <h1 id="reportApproved">
+                0
+            </h1>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Pending</h3>
+
+            <h1 id="reportPending">
+                0
+            </h1>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Rejected</h3>
+
+            <h1 id="reportRejected">
+                0
+            </h1>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="section-box">
+
+        <h2>Classes by Staff Member</h2>
+
+
+        <div class="table-responsive">
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>Staff Member</th>
+
+                    <th>Total Classes</th>
+
+                    <th>Approved</th>
+
+                    <th>Pending</th>
+
+                    <th>Rejected</th>
+
+                </tr>
+
+                </thead>
+
+
+                <tbody id="staffReportTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="section-box">
+
+        <h2>Classes by Subject</h2>
+
+
+        <div class="table-responsive">
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>Subject</th>
+
+                    <th>Number of Classes</th>
+
+                </tr>
+
+                </thead>
+
+
+                <tbody id="subjectReportTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="section-box">
+
+        <h2>Complete Evening Classes Report</h2>
+
+
+        <button onclick="window.print()">
+
+            PRINT REPORT
+
+        </button>
+
+
+        <br><br>
+
+
+        <div class="table-responsive">
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>#</th>
+
+                    <th>Staff</th>
+
+                    <th>Date</th>
+
+                    <th>Subject</th>
+
+                    <th>Start</th>
+
+                    <th>End</th>
+
+                    <th>Topic</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+                </thead>
+
+
+                <tbody id="fullReportTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
