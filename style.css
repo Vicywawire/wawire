@@ -15,8 +15,8 @@
 }
 
 .header-logo {
-    width: 30px !important;
-    height: 30px !important;
+    width: 60px !important;
+    height: 60px !important;
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -51,6 +51,7 @@ body {
 .header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 15px;
 
     background: linear-gradient(
