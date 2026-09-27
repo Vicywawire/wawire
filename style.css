@@ -26,7 +26,7 @@
     --primary-dark: #07294c;
     --primary-light: #e9f2fb;
     --secondary: #128c7e;
-   --background: #d946ef;
+   --background: #FFC0CB;
     --white: #ffffff;
     --text: #1f2937;
     --muted: #6b7280;
@@ -51,7 +51,6 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 15px;
 
     background: linear-gradient(
