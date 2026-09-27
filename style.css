@@ -41,6 +41,11 @@ body {
 ===================================================== */
 
 .header {
+   .header {
+    display: flex;
+    align-items: right;
+    gap: 15px;
+}
     background: linear-gradient(
         135deg,
         var(--primary-dark),
