@@ -3,8 +3,9 @@
 ===================================================== */
 
 * {
-     box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 .school-logo {
     width: 60px;
     height: 60px;
@@ -48,11 +49,737 @@ body {
 ===================================================== */
 
 .header {
-   .header {
     display: flex;
-    align-items: right;
+    align-items: center;
     gap: 15px;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary-dark),
+        var(--primary)
+    );
+
+    color: white;
+    padding: 22px 35px;
 }
+
+.header h2 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.header p {
+    margin: 6px 0 0;
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav {
+    background: white;
+    padding: 0 30px;
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.nav a {
+    color: var(--primary);
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    padding: 20px 15px;
+
+    transition: 0.2s;
+}
+
+.nav a:hover {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+
+/* =====================================================
+   PAGE CONTENT
+===================================================== */
+
+.container {
+    width: 94%;
+    max-width: 1400px;
+
+    margin: 30px auto;
+}
+
+.container > h2 {
+    color: var(--primary-dark);
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   DASHBOARD CARDS
+===================================================== */
+
+.dashboard-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+
+    gap: 22px;
+
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.08);
+
+    border-left:
+        5px solid var(--primary);
+
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    color: var(--muted);
+
+    margin: 0 0 15px;
+
+    font-size: 16px;
+}
+
+.card h1 {
+    color: var(--primary);
+
+    margin: 0;
+
+    font-size: 38px;
+}
+
+
+/* =====================================================
+   SECTION BOX
+===================================================== */
+
+.section-box {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    margin-top: 25px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.section-box h2 {
+    margin-top: 0;
+
+    color: var(--primary-dark);
+}
+
+
+/* =====================================================
+   ADMIN MENU BUTTONS
+===================================================== */
+
+.admin-buttons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(190px, 1fr));
+
+    gap: 18px;
+}
+
+.big-button {
+    text-decoration: none;
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 22px 18px;
+
+    text-align: center;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.big-button:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FORMS
+===================================================== */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+    color: #374151;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    font-size: 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: white;
+
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(11, 61, 112, 0.12);
+}
+
+textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+button {
+    background: var(--primary);
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 20px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+.secondary-btn {
+    background: #64748b;
+}
+
+.secondary-btn:hover {
+    background: #475569;
+}
+
+.edit-btn {
+    background: #f59e0b;
+}
+
+.edit-btn:hover {
+    background: #d97706;
+}
+
+.delete-btn {
+    background: var(--danger);
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+.approve-btn {
+    background: var(--success);
+}
+
+.approve-btn:hover {
+    background: #146c43;
+}
+
+.reject-btn {
+    background: var(--warning);
+}
+
+.reject-btn:hover {
+    background: #d97706;
+}
+
+
+/* =====================================================
+   TABLES
+===================================================== */
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    margin-top: 15px;
+}
+
+th {
+    background: var(--primary);
+
+    color: white;
+
+    text-align: left;
+
+    padding: 13px;
+
+    font-size: 14px;
+}
+
+td {
+    padding: 13px;
+
+    border-bottom:
+        1px solid var(--border);
+
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* =====================================================
+   STAFF FORM - GOOGLE FORM STYLE
+===================================================== */
+
+.google-form {
+    width: 100%;
+    max-width: 780px;
+
+    margin: 0 auto;
+}
+
+.form-header {
+    background: white;
+
+    padding: 27px;
+
+    border-radius: 12px;
+
+    border-top:
+        9px solid var(--primary);
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.form-header h2 {
+    margin-top: 0;
+
+    color: var(--primary-dark);
+}
+
+.question-card {
+    background: white;
+
+    padding: 24px;
+
+    margin-bottom: 16px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.question-card label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.required-text {
+    color: var(--danger);
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   WELCOME BOX
+===================================================== */
+
+.welcome-box {
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #edf5ff
+    );
+
+    padding: 24px;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.07);
+
+    border-left:
+        5px solid var(--primary);
+}
+
+.welcome-box h2 {
+    margin-top: 0;
+
+    color: var(--primary-dark);
+}
+
+
+/* =====================================================
+   STATUS BADGES
+===================================================== */
+
+.status-approved {
+    background: #d1fae5;
+    color: #065f46;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    font-size: 12px;
+}
+
+.status-pending {
+    background: #fef3c7;
+    color: #92400e;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    font-size: 12px;
+}
+
+.status-rejected {
+    background: #fee2e2;
+    color: #991b1b;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   MESSAGES
+===================================================== */
+
+.success-message {
+    background: #d1fae5;
+
+    color: #065f46;
+
+    padding: 13px;
+
+    border-radius: 7px;
+
+    margin-top: 15px;
+}
+
+.error-message {
+    background: #fee2e2;
+
+    color: #991b1b;
+
+    padding: 13px;
+
+    border-radius: 7px;
+
+    margin-top: 15px;
+}
+
+
+/* =====================================================
+   LOGIN PAGE
+===================================================== */
+
+.login-box {
+    width: 92%;
+    max-width: 430px;
+
+    margin: 80px auto;
+
+    background: white;
+
+    padding: 38px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.14);
+
+    text-align: center;
+}
+
+.login-box h1 {
+    color: var(--primary);
+
+    margin-bottom: 8px;
+}
+
+.login-box h3 {
+    color: var(--muted);
+
+    margin-bottom: 30px;
+}
+
+.login-box label {
+    display: block;
+
+    text-align: left;
+
+    font-weight: bold;
+
+    margin: 12px 0 5px;
+}
+
+.login-box input,
+.login-box select {
+    margin-bottom: 14px;
+}
+
+.login-box button {
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 13px;
+}
+
+
+/* =====================================================
+   FILTERS
+===================================================== */
+
+.filter-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.filter-area label {
+    font-weight: bold;
+}
+
+.filter-area select {
+    width: auto;
+
+    min-width: 190px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media screen and (max-width: 800px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .nav {
+        display: block;
+
+        padding: 8px 15px;
+    }
+
+    .nav a {
+        display: block;
+
+        padding: 12px;
+
+        border-bottom:
+            1px solid var(--border);
+    }
+
+    .container {
+        width: 94%;
+
+        margin-top: 20px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-area {
+        display: block;
+    }
+
+    .filter-area select {
+        width: 100%;
+
+        margin-top: 8px;
+    }
+}
+
+
+/* =====================================================
+   PRINT
+===================================================== */
+
+@media print {
+
+    .nav,
+    button {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    .section-box,
+    .card {
+        box-shadow: none;
+    }
+}/* =====================================================
+   EVENING CLASSES - MAIN DESIGN
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+.school-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.header-logo {
+    width: 30px !important;
+    height: 30px !important;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+:root {
+    --primary: #0b3d70;
+    --primary-dark: #07294c;
+    --primary-light: #e9f2fb;
+    --secondary: #128c7e;
+   --background: #d946ef;
+    --white: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #e2e8f0;
+    --danger: #dc3545;
+    --warning: #f59e0b;
+    --success: #198754;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+
+/* =====================================================
+   HEADER 
+===================================================== */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
     background: linear-gradient(
         135deg,
         var(--primary-dark),
