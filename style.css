@@ -4,6 +4,13 @@
 
 * {
     box-sizing: border-box;
+   .school-logo {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px auto;
+}
 }
 
 :root {
@@ -30,7 +37,7 @@ body {
 
 
 /* =====================================================
-   HEADER
+   HEADER 
 ===================================================== */
 
 .header {
