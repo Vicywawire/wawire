@@ -2125,3 +2125,137 @@ function setText(
             value;
     }
 }
+// ==============================
+// ADMIN LOGIN
+// ==============================
+
+function adminLogin(){
+
+    let username =
+    document.getElementById("adminUsername").value;
+
+
+    let password =
+    document.getElementById("adminPassword").value;
+
+
+    if(
+        username==="admin" &&
+        password==="admin123"
+    ){
+
+        localStorage.setItem(
+            "loggedInRole",
+            "admin"
+        );
+
+
+        localStorage.setItem(
+            "loggedInUser",
+            "Administrator"
+        );
+
+
+        window.location.href =
+        "admin-dashboard.html";
+
+
+    }else{
+
+
+        document.getElementById(
+        "adminMessage"
+        ).innerHTML =
+        "Wrong admin login details";
+
+
+    }
+
+}
+
+
+
+// ==============================
+// STAFF LOGIN
+// ==============================
+
+function staffLogin(){
+
+
+    let username =
+    document.getElementById(
+    "staffUsername"
+    ).value.trim();
+
+
+
+    let password =
+    document.getElementById(
+    "staffPassword"
+    ).value.trim();
+
+
+
+    let staff = 
+    JSON.parse(
+    localStorage.getItem("staff")
+    ) || [];
+
+
+
+    let user =
+    staff.find(function(member){
+
+
+        return (
+
+        member.username === username
+        &&
+        member.password === password
+
+        );
+
+
+    });
+
+
+
+    if(user){
+
+
+        localStorage.setItem(
+        "loggedInRole",
+        "staff"
+        );
+
+
+        localStorage.setItem(
+        "loggedInUser",
+        user.name
+        );
+
+
+        localStorage.setItem(
+        "loggedInUsername",
+        user.username
+        );
+
+
+
+        window.location.href =
+        "staff-dashboard.html";
+
+
+
+    }else{
+
+
+        document.getElementById(
+        "staffMessage"
+        ).innerHTML =
+        "Invalid staff username or password";
+
+
+    }
+
+}
